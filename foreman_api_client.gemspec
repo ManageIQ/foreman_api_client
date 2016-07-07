@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'manageiq_foreman/version'
+require 'foreman_api_client/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "manageiq_foreman"
-  spec.version       = ManageiqForeman::VERSION
-  spec.authors       = ["Keenan Brock"]
-  spec.email         = ["keenan@thebrocks.net"]
-  spec.description   = %q{Foreman Provider for ManageIQ}
-  spec.summary       = %q{Foreman Provider for ManageIQ}
-  spec.homepage      = "https://github.com/ManageIQ/manageiq"
+  spec.name          = "foreman_api_client"
+  spec.version       = ForemanApiClient::VERSION
+  spec.authors       = ["Keenan Brock", "Brandon Dunne"]
+  spec.email         = ["keenan@thebrocks.net", "bdunne@redhat.com"]
+  spec.description   = %q{Foreman apipie-bindings wrapper}
+  spec.summary       = %q{Foreman apipie-bindings wrapper}
+  spec.homepage      = "https://github.com/ManageIQ/foreman_api_client"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

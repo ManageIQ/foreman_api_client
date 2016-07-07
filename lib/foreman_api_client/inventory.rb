@@ -1,4 +1,4 @@
-module ManageiqForeman
+module ForemanApiClient
   class Inventory
     attr_accessor :connection
 

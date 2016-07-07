@@ -1,4 +1,4 @@
-describe ManageiqForeman::Inventory do
+describe ForemanApiClient::Inventory do
   describe "#refresh_configuration" do
     it "fetches location details" do
       connection = double("connection")

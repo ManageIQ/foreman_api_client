@@ -1,6 +1,6 @@
-module ManageiqForeman
+module ForemanApiClient
   class Connection
-    include ManageiqForeman::Logging
+    include ForemanApiClient::Logging
     # some foreman servers don't have locations or organizations, just return nil
     ALLOW_404 = [:locations, :organizations]
     attr_accessor :connection_attrs
@@ -53,7 +53,7 @@ module ManageiqForeman
     end
 
     def host(manager_ref)
-      ::ManageiqForeman::Host.new(self, manager_ref)
+      ::ForemanApiClient::Host.new(self, manager_ref)
     end
 
     def inventory

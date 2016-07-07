@@ -1,4 +1,4 @@
-# ManageiqForeman
+# ForemanApiClient
 
 This allows manageiq to use foreman as a provider
 

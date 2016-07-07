@@ -33,4 +33,4 @@ VCR.configure do |c|
   # c.debug_logger = STDOUT
 end
 
-require 'manageiq_foreman'
+require 'foreman_api_client'

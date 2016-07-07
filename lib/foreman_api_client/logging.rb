@@ -1,16 +1,16 @@
-require "manageiq_foreman/null_logger"
+require "foreman_api_client/null_logger"
 
-module ManageiqForeman
+module ForemanApiClient
   extend self
   attr_accessor :logger
 
   module Logging
     def logger
-      ManageiqForeman.logger ||= NullLogger.new
+      ForemanApiClient.logger ||= NullLogger.new
     end
 
     def logger=(new_logger)
-      ManageiqForeman.logger = new_logger
+      ForemanApiClient.logger = new_logger
     end
 
     def dump_hash(hash)

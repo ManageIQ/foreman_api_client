@@ -1,4 +1,4 @@
-module ManageiqForeman
+module ForemanApiClient
   class Host
     attr_accessor :manager_ref
     attr_accessor :connection

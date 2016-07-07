@@ -1,4 +1,4 @@
-module ManageiqForeman
+module ForemanApiClient
   # like the WillPaginate collection
   class PagedResponse
     include Enumerable

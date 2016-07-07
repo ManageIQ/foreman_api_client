@@ -1,5 +1,5 @@
-describe ManageiqForeman do
+describe ForemanApiClient do
   it 'should have a version number' do
-    expect(ManageiqForeman::VERSION).not_to be_nil
+    expect(ForemanApiClient::VERSION).not_to be_nil
   end
 end

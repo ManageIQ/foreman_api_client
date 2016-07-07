@@ -1,4 +1,4 @@
-describe ManageiqForeman::Connection do
+describe ForemanApiClient::Connection do
   before do
     unless connection.api_cached?
       with_vcr("_json_info") do
@@ -71,7 +71,7 @@ describe ManageiqForeman::Connection do
 
   it "#inventory" do
     inventory = connection.inventory
-    expect(inventory).to            be_instance_of(ManageiqForeman::Inventory)
+    expect(inventory).to            be_instance_of(ForemanApiClient::Inventory)
     expect(inventory.connection).to eq(connection)
   end
 end

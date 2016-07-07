@@ -1,4 +1,4 @@
-describe ManageiqForeman::PagedResponse do
+describe ForemanApiClient::PagedResponse do
   describe "#initializer" do
     context "with index hash" do
       let(:paged_response) do

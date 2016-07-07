@@ -1,6 +1,6 @@
 require 'logger'
 
-module ManageiqForeman
+module ForemanApiClient
   class NullLogger < Logger
     def initialize(*_args)
     end
