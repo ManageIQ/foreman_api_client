@@ -68,10 +68,4 @@ describe ForemanApiClient::Connection do
       end
     end
   end
-
-  it "#inventory" do
-    inventory = connection.inventory
-    expect(inventory).to            be_instance_of(ForemanApiClient::Inventory)
-    expect(inventory.connection).to eq(connection)
-  end
 end

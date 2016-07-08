@@ -56,10 +56,6 @@ module ForemanApiClient
       ::ForemanApiClient::Host.new(self, manager_ref)
     end
 
-    def inventory
-      Inventory.new(self)
-    end
-
     # used for tests to manually invoke loading api from server
     # this keeps http calls consistent
 
