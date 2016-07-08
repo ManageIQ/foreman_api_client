@@ -1,63 +1,40 @@
 # ForemanApiClient
 
-This allows manageiq to use foreman as a provider
+[![Build Status](https://travis-ci.org/ManageIQ/foreman_api_client.svg?branch=master)](https://travis-ci.org/ManageIQ/foreman_api_client)
+[![Code Climate](https://codeclimate.com/github/ManageIQ/foreman_api_client/badges/gpa.svg)](https://codeclimate.com/github/ManageIQ/foreman_api_client)
+[![Coverage Status](https://coveralls.io/repos/ManageIQ/foreman_api_client/badge.svg)](https://coveralls.io/github/ManageIQ/foreman_api_client)
 
-Quick collaboration work to nail down our use cases with the foreman
+A simple wrapper around Apipie-bindings to provide ruby classes for Foreman
 
-# Pre-workflows
+## Installation
 
-  - EngOps registers baremetal via ISO (when racking new hardware)
-    + burn iso
-    + boot machine with iso
-    + via cd, foreman discovers machine and creates foreman host record
-  - discovery in foreman
-  - discovery via manageiq (no)
+Add this line to your application's Gemfile:
 
-  - assign ipmi (iDrac - dell's ipmi hardware)
-  - assign primary interface: mac
-  - assign os architecture
+    gem 'foreman_api_client', :git => "git://github.com/ManageIQ/foreman_api_client.git", :branch => "master"
 
-# Foreman setup (DevOps)
+And then execute:
 
-OS contains:
-  - 1 customization template
-  - list of acceptable media, ptable
+    $ bundle
 
-Hostgroup contains:
+## Usage
 
-   - environment, puppet ca, puppet master, network/domain
-   - optionally: os, media, partition table
+    ```ruby
+      require 'foreman_api_client'
+      ForemanApiClient.logger ||= $log
+      connection = ForemanApiClient::Connection.new(
+        :base_url   => base_url,
+        :username   => username,
+        :password   => password,
+        :verify_ssl => verify_ssl
+      )
+      c.host(1)
+      => #<ForemanApiClient::Host:0x0055b8a05daa58 ...>
+    ```
 
-subnet contains:
+## Contributing
 
-  - all network information except for ipaddress
-
-
-# Provision Bare metal (User)
-
-  - Catalog
-    + pxe server [server / image] (pxe only)
-    + Host Group
-    + OS
-  - Customize:
-    + root password
-    + host name
-    + ip address
-    + subnet
-    + medium
-    + ptable
-    + subnet is replacing gateway, dns, ...
-    + medium/ptable is replacing template
-
-# workflows for another day
-
-## inventory
-
-  - get list of all foreman hosts
-  - determine if we already have a vm for that host record / link them
-
-## register VM via ManageIq (at provisioning time)
-
-  - we create VM in VMWare
-    + via rest protocol create foreman host record
-    + set primary interface mac address
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
