@@ -1,5 +1,6 @@
 # ForemanApiClient
 
+[![Gem Version](https://badge.fury.io/rb/foreman_api_client.svg)](http://badge.fury.io/rb/foreman_api_client)
 [![Build Status](https://travis-ci.org/ManageIQ/foreman_api_client.svg?branch=master)](https://travis-ci.org/ManageIQ/foreman_api_client)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/foreman_api_client/badges/gpa.svg)](https://codeclimate.com/github/ManageIQ/foreman_api_client)
 [![Coverage Status](https://coveralls.io/repos/ManageIQ/foreman_api_client/badge.svg)](https://coveralls.io/github/ManageIQ/foreman_api_client)
