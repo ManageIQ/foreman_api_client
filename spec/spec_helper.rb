@@ -1,9 +1,5 @@
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-
-if ENV["TRAVIS"]
-  require 'coveralls'
-  Coveralls.wear!
-end
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 require 'vcr'
 
@@ -28,4 +24,5 @@ VCR.configure do |c|
   # c.debug_logger = STDOUT
 end
 
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'foreman_api_client'
