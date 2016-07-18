@@ -1,11 +1,13 @@
-# ForemanApiClient
+# Foreman API Client
 
-[![Build Status](https://travis-ci.org/ManageIQ/foreman_api_client.svg?branch=master)](https://travis-ci.org/ManageIQ/foreman_api_client)
+[![Gem Version](https://badge.fury.io/rb/foreman_api_client.svg)](http://badge.fury.io/rb/foreman_api_client)
+[![Build Status](https://travis-ci.org/ManageIQ/foreman_api_client.svg)](https://travis-ci.org/ManageIQ/foreman_api_client)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/foreman_api_client/badges/gpa.svg)](https://codeclimate.com/github/ManageIQ/foreman_api_client)
-[![Coverage Status](https://coveralls.io/repos/ManageIQ/foreman_api_client/badge.svg)](https://coveralls.io/github/ManageIQ/foreman_api_client)
+[![Test Coverage](https://codeclimate.com/github/ManageIQ/foreman_api_client/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/foreman_api_client/coverage)
+[![Dependency Status](https://gemnasium.com/ManageIQ/foreman_api_client.svg)](https://gemnasium.com/ManageIQ/foreman_api_client)
 [![Security](https://hakiri.io/github/ManageIQ/foreman_api_client/master.svg)](https://hakiri.io/github/ManageIQ/foreman_api_client/master)
 
-A simple wrapper around Apipie-bindings to provide ruby classes for Foreman
+A simple wrapper around Apipie-bindings to provide Ruby classes for [Foreman](https://theforeman.org/).
 
 ## Installation
 
@@ -19,18 +21,18 @@ And then execute:
 
 ## Usage
 
-    ```ruby
-      require 'foreman_api_client'
-      ForemanApiClient.logger ||= $log
-      connection = ForemanApiClient::Connection.new(
-        :base_url   => base_url,
-        :username   => username,
-        :password   => password,
-        :verify_ssl => verify_ssl
-      )
-      c.host(1)
-      => #<ForemanApiClient::Host:0x0055b8a05daa58 ...>
-    ```
+```ruby
+require 'foreman_api_client'
+ForemanApiClient.logger = Logger.new(STDOUT)
+connection = ForemanApiClient::Connection.new(
+  :base_url   => base_url,
+  :username   => username,
+  :password   => password,
+  :verify_ssl => verify_ssl
+)
+c.host(1)
+=> #<ForemanApiClient::Host:0x0055b8a05daa58 ...>
+```
 
 ## Contributing
 
@@ -39,3 +41,7 @@ And then execute:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## License
+
+The gem is available as open source under the terms of the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).

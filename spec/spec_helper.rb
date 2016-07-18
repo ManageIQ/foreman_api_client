@@ -1,20 +1,9 @@
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-
-begin
-  require 'pry'
-rescue LoadError
-end
-
-if ENV["TRAVIS"]
-  require 'coveralls'
-  Coveralls.wear!
-end
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
 
 require 'vcr'
 
-# vcr helper
-RECORD = {:record => :new_episodes}
-# e.g.: with_vcr("_3hosts", RECORD)
+# Example: with_vcr("_3hosts", :record => :new_episodes)
 def with_vcr(extension = "", options = {})
   VCR.use_cassette("#{described_class.name}#{extension}", options) do
     yield
@@ -33,4 +22,5 @@ VCR.configure do |c|
   # c.debug_logger = STDOUT
 end
 
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'foreman_api_client'
