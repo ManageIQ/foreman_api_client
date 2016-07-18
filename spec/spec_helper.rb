@@ -1,10 +1,5 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
-begin
-  require 'pry'
-rescue LoadError
-end
-
 if ENV["TRAVIS"]
   require 'coveralls'
   Coveralls.wear!
