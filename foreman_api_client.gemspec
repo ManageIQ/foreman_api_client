@@ -8,14 +8,15 @@ Gem::Specification.new do |spec|
   spec.version       = ForemanApiClient::VERSION
   spec.authors       = ["Keenan Brock", "Brandon Dunne"]
   spec.email         = ["keenan@thebrocks.net", "bdunne@redhat.com"]
+
   spec.description   = %q{Foreman apipie-bindings wrapper}
   spec.summary       = %q{Foreman apipie-bindings wrapper}
   spec.homepage      = "https://github.com/ManageIQ/foreman_api_client"
-  spec.license       = "MIT"
+  spec.license       = "Apache-2.0"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "apipie-bindings", "= 0.0.15"
