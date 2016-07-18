@@ -3,9 +3,7 @@ CodeClimate::TestReporter.start
 
 require 'vcr'
 
-# vcr helper
-RECORD = {:record => :new_episodes}
-# e.g.: with_vcr("_3hosts", RECORD)
+# Example: with_vcr("_3hosts", :record => :new_episodes)
 def with_vcr(extension = "", options = {})
   VCR.use_cassette("#{described_class.name}#{extension}", options) do
     yield
