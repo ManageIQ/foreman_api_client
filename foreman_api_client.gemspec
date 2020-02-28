@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "apipie-bindings", "= 0.0.15"
   spec.add_runtime_dependency "rest-client",     ">= 2.0.0.rc1"
 
-  spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "codeclimate-test-reporter", "~> 1.0.0"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
