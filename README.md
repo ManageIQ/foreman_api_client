@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.org/ManageIQ/foreman_api_client.svg)](https://travis-ci.org/ManageIQ/foreman_api_client)
 [![Code Climate](https://codeclimate.com/github/ManageIQ/foreman_api_client/badges/gpa.svg)](https://codeclimate.com/github/ManageIQ/foreman_api_client)
 [![Test Coverage](https://codeclimate.com/github/ManageIQ/foreman_api_client/badges/coverage.svg)](https://codeclimate.com/github/ManageIQ/foreman_api_client/coverage)
-[![Security](https://hakiri.io/github/ManageIQ/foreman_api_client/master.svg)](https://hakiri.io/github/ManageIQ/foreman_api_client/master)
 
 A simple wrapper around Apipie-bindings to provide Ruby classes for [Foreman](https://theforeman.org/).
 
