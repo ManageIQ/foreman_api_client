@@ -22,10 +22,10 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "apipie-bindings", "= 0.0.15"
   spec.add_runtime_dependency "rest-client",     "~> 2.0"
 
-  spec.add_development_dependency "codeclimate-test-reporter", "~> 1.0.0"
   spec.add_development_dependency "manageiq-style"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
-  spec.add_development_dependency "vcr",                       "~> 3.0.2"
-  spec.add_development_dependency "webmock",                   "~> 2.3.1"
+  spec.add_development_dependency "simplecov", ">= 0.21.2"
+  spec.add_development_dependency "vcr",       "~> 3.0.2"
+  spec.add_development_dependency "webmock",   "~> 2.3.1"
 end
