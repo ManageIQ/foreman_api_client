@@ -10,7 +10,10 @@ module ForemanApiClient
       connection_attrs[:uri] = connection_attrs.delete(:base_url)
       connection_attrs[:api_version] ||= 2
       connection_attrs[:apidoc_cache_dir] ||= tmpdir
-      options = {:verify_ssl => connection_attrs.delete(:verify_ssl)}
+      options = {
+        verify_ssl:  connection_attrs.delete(:verify_ssl),
+        ssl_ca_file: connection_attrs.delete(:ssl_ca_file)
+      }.compact
       @api = ApipieBindings::API.new(connection_attrs, options)
     end
 

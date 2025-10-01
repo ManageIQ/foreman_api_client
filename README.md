@@ -23,10 +23,11 @@ And then execute:
 require 'foreman_api_client'
 ForemanApiClient.logger = Logger.new(STDOUT)
 connection = ForemanApiClient::Connection.new(
-  :base_url   => base_url,
-  :username   => username,
-  :password   => password,
-  :verify_ssl => verify_ssl
+  base_url:    'https://foreman.example.com',
+  username:    'API_USER',
+  password:    'API_PASSWORD',
+  verify_ssl:  true, # optional: Defaults to `true`
+  ssl_ca_file: '/path/to/ssl_ca_file.pem', # optional: Path to CA certificate file.
 )
 c.host(1)
 => #<ForemanApiClient::Host:0x0055b8a05daa58 ...>
