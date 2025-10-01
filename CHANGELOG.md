@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-10-01
+### Added
+- Support setting `ssl_ca_file` [[#35](https://github.com/ManageIQ/foreman_api_client/pull/35)]
+
 ## [1.0.2] - 2022-09-08
 ### Changed
 - Support Ruby 3.0 [[#20](https://github.com/ManageIQ/foreman_api_client/pull/20)]
